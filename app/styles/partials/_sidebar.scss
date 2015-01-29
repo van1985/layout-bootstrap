@@ -3,11 +3,17 @@
   height: 100%;
   background-color: palette(gray);
   margin-right: 0;
+  padding-top: 10px;
+
+  .span {
+    font-weight: bold;
+  }
 }
 
 .sidebar-item {
   @include adjust-font-size-to($font-size-xlarge, 2);
   padding-left: 1rem;
+  line-height: 4rem;
   &.selected, &:hover {
     background-color: palette(white);
     color: palette(skyblue, dark);

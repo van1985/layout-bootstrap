@@ -1,117 +1,55 @@
 <div class="header">
     <header>
         <img class="header-logo" src="images/logo.png" alt="">
-        <div class="header-title">call<em>sears</em></div>
-
-        <div class="user-status">        
-          <span class="fa fa-check status-icon-online"></span>
-          <span class="fa fa-close status-icon-offline"></span>
-          <div class="user-name"
-               ng-swipe-left="toggleStatusOffline()"
-               ng-swipe-right="toggleStatusOnline()"
-               ng-class="toggleStatus"><span class="fa fa-user status-icon"></span>{{ current.userName }}</div>
-        </div>
-        <div class="user-precense">
-          <span class="fa ">
-            <select ng-model="status" ng-options="option.value as option.name for option in statusOptions" ng-change="presence(status)"></select>
-          </span>
-        </div>        
+        <div class="header-title">call<em>sears</em></div>     
     </header>
-    <audio id="audio_remote" autoplay="autoplay" />
 </div>
 <div class="main contact-page">
   <div class="sidebar">
-    <div class="sidebar-item">
+    <div class="sidebar-item" ng-class="{selected: tab == 'stats'}" ng-click="changeTab('stats')">
       <span class="fa fa-area-chart"></span>
+      <img src="images/statics_button.png" alt>
       <span>Statistics</span>
     </div>
-    <div class="sidebar-item" ng-class="{selected: tab == 'contacts'}" ng-click="changeTab('contacts')">
-      <span class="fa fa-at"></span>
-      <span>Contacts</span>
+  </div>
+  <!-- STATISTICS -->
+  <div class="content" ng-show="tab == 'stats'">
+    <div class="filters">
+      <button>Daily</button>
+      <button>Weekly</button>
+      <button>Monthly</button>
     </div>
-    <div class="sidebar-item">
-      <span class="fa fa-phone"></span>
-      <span>Recent</span>
+    <div class="sub-content-1">
+      <div class="chart-container">
+        <tittle>Calls</tittle>
+        <div id="allCallsChart" class="chart" chart></div>
+      </div>
+      <div class="details-container">
+        <div class="detail">
+          <span class="number">56</span>
+          <span>Calls</span>
+        </div>
+        <div class="detail">
+          <tittle>Average</tittle>
+          <span class="number">6</span>
+          <span>Call/Hs</span>
+        </div>
+        <div class="detail">
+          <tittle>Average</tittle>
+          <span class="number">0,2</span>
+          <span>Call/Min</span>
+        </div>
+      </div>
     </div>
-    <div ng-class="{selected: isSelectedRoom(channel)}" ng-repeat="(channel, room) in rooms" ng-click="openRoom(room.channel)" class="sidebar-item contact">
-      <span class="fa fa-user"></span>
-      <span>{{room.channel}}</span>
-      <span class="unread" ng-show="room.unread > 0">{{room.unread}}</span>
+    <div class="sub-content-2">
+      <div class="chart-container">
+        <tittle>Incoming Calls</tittle>
+        <div id="incomingCallsChart" class="chart" donut-chart></div>
+      </div>
+      <div class="chart-container">
+        <tittle>Answered Calls</tittle>
+        <div id="answeredCallsChart" class="chart" donut-chart></div>
+      </div>
     </div>
   </div>
-  <!-- CONTACTS -->
-  <div class="content" ng-show="tab == 'contacts'">
-    <div class="tabs">
-      <div ng-class="{selected: !contactFilter.enable}" ng-click="changeFilter('')" class="tab">All</div>
-      <div ng-class="{selected: contactFilter.type == 'online'}"  ng-click="changeFilter('online')" class="tab">On line</div>
-      <div class="search-box">
-        <input type="text" placeholder="Departments, Part..." ng-change="search()" ng-model="q"><span class="fa fa-search"></span>
-      </div>
-    </div>
-    <!-- MY CLIENTS -->
-    <h2 ng-hide="isSearch()">Partners More Contact</h2>
-    <div ng-hide="isSearch()"class="contacts">
-      <div ng-repeat="user in users | limitTo: 4" ng-if="isVisibleUser(user)" ng-class="getUserStatus(user)" class="contact">
-        <span class="fa fa-user"></span><span>{{user.userName}}</span>
-        <span class="fa controls fa-phone" ng-click="call(user.ext)"></span>
-        <span class="fa controls fa-comment" ng-click="openRoom(user.userName, user)"></span>
-      </div>
-    </div>
-    <h2 ng-hide="isSearch()" >My Clients</h2>
-    <div ng-hide="isSearch()" class="contacts">
-      <div ng-repeat="user in users" ng-if="isVisibleUser(user)" ng-class="getUserStatus(user)" class="contact">
-        <span class="fa fa-user"></span><span>{{user.userName}}</span>
-        <span class="fa controls fa-phone" ng-click="call(user.ext)"></span>
-        <span class="fa controls fa-comment" ng-click="openRoom(user.userName, user)"></span>
-      </div>
-    </div>
-    <!-- SEARCH -->
-    <h2 ng-show="isSearchEmpty()">No Results</h2>
-    <h2 ng-show="searchResult.departments.length > 0">Departments</h2>
-    <div ng-show="searchResult.departments.length > 0" class="contacts">
-      <div ng-repeat="department in searchResult.departments" class="contact">
-        <span class="fa fa-building"></span><span>{{department.displayName}}</span>
-        <span class="fa controls fa-phone" ng-click="call(department.ext)"></span>
-      </div>
-    </div>
-    <h2 ng-show="searchResult.users.length > 0" >Clients</h2>
-    <div ng-show="searchResult.users.length > 0" class="contacts">
-      <div ng-repeat="user in searchResult.users" ng-if="isVisibleUser(user)" ng-class="getUserStatus(user)" class="contact">
-        <span class="fa fa-user"></span><span>{{user.userName}}</span>
-        <span class="fa controls fa-phone" ng-click="call(user.ext)"></span>
-        <span class="fa controls fa-comment" ng-click="openRoom(user.userName, user)"></span>
-      </div>
-    </div>    
-  </div>
-  <!-- ROOMS -->
-  <div class="content" ng-show="tab == 'rooms'">
-    <div class="tabs">
-      <div class="contact-info">
-        <div class="fa fa-user"></div>
-        <div class="contact-name">{{selectedRoom.channel}}</div>
-        <div class="contact-number">{{selectedRoom.users[0].ext}}</div>
-      </div>
-      <div class="btn-hold" ng-show="isSelectedRoomCalling()" ng-click="holdToggle()">
-        <span ng-show="holding" class="fa fa-play"></span>
-        <span ng-hide="holding" class="fa fa-pause"></span>
-      </div>
-      <div class="btn-transfer" ng-show="isSelectedRoomCalling()" ng-click="transferPopup()"><span class="fa fa-share"></div>
-      <div class="btn-hangup" ng-show="isSelectedRoomCalling()" ng-click="hangup()"><span class="fa fa-phone"></div>
-      <div class="btn-call-contact" ng-hide="isSelectedRoomCalling()" ng-click="call(selectedRoom.users[0].ext)"><span class="fa fa-phone"></div>
-    </div>
-    <!-- <h2>Messages</h2> -->
-    <div>
-      <ul class="messages">
-        <li class="message" ng-repeat="line in selectedRoom.history">
-          <div class="message-user">{{line.user}}</div>
-          <div class="message-content">{{line.message}}</div>
-          <div class="message-time">{{line.time | date : 'HH:mm'}}</div>
-        </li>
-      </ul>
-    </div>
-    <div class="chat-box" ng-show="selectedRoom">
-      <input type="text" ng-model="body" placeholder="something...">
-      <button class="btn btn-default" ng-click="sendMessage()">Send</button>
-    </div>    
-  </div>  
 </div>
