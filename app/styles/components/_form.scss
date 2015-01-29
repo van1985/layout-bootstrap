@@ -1,0 +1,34 @@
+.app-input {
+	padding: 0;
+	border: none;
+	@include adjust-font-size-to($base-font-size);
+	@include padding-leader(.5);
+	@include trailing-border(1px, .5);
+	@include trailer;
+	display: block;
+	width: 100%;
+	border-color: palette(gray);
+}
+
+input[type="checkbox"] {
+  display:none;
+}
+
+input[type="checkbox"]:checked + label {
+  @include adjust-font-size-to(22px, 2);
+  @include border-radius($base-line-height/2);
+  display: inline-block;
+  background-color: palette(skyblue);
+  border: 1px solid palette(skyblue);
+}
+
+input[type="checkbox"] + label {
+  @include adjust-font-size-to(22px, 2);
+  @include border-radius($base-line-height/2);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: inline-block;
+  border: 1px solid palette(gray);
+  cursor: pointer;
+  margin-right: 1rem;
+}

@@ -1,0 +1,17 @@
+h1, h2, h3 {
+	margin: 0;
+}
+
+h1 {
+	@include adjust-font-size-to($font-size-xlarge);
+  @include trailer(.5, $font-size-xlarge);
+}
+
+h2 {
+  @include adjust-font-size-to($font-size-large);
+  @include trailer(.5, $font-size-large);
+}
+
+p {
+	margin: 0;
+}

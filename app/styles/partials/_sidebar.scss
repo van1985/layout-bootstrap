@@ -1,0 +1,27 @@
+.sidebar {
+  @include span(30%);
+  height: 100%;
+  background-color: palette(gray);
+  margin-right: 0;
+}
+
+.sidebar-item {
+  @include adjust-font-size-to($font-size-xlarge, 2);
+  padding-left: 1rem;
+  &.selected, &:hover {
+    background-color: palette(white);
+    color: palette(skyblue, dark);
+  }
+  &.contact {
+    @include adjust-font-size-to($font-size-normal, 2);
+
+    .unread {
+      float: right;
+      line-height: 30px;
+      margin-right: 10px;
+      margin-top: 10px;
+      border: 1px solid black;
+      padding: 0px 10px;      
+    }
+  }
+}

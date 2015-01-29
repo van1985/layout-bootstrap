@@ -1,0 +1,82 @@
+.page-login {
+  @include container;
+}
+
+.logo {
+  @include rhythm;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 200px;
+}
+
+.login {
+  padding-top: $base-line-height*2;
+}
+
+.user-icon {
+  font-size: 72px;
+  margin: {
+    top: 40px;
+    bottom: 20px;
+  };
+}
+
+.login-credentials-title {
+  @include adjust-font-size-to(36px);
+  @include trailer;
+  font-weight: 300;
+  text-align: center;
+  em {
+    font-style: normal;
+    font-weight: 400;
+  }
+}
+
+.btn-login {
+  @include adjust-font-size-to(22px, 2);
+  @include border-radius($base-line-height/2);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  min-width: 120px;
+  background-color: palette(green, light);
+  border: none;
+  color: palette(white);
+  border: none;
+}
+
+.input-login {
+  @include padding-leader(.5);
+  @include padding-trailer(.5);
+  @include border-radius($base-line-height);
+  @include adjust-font-size-to(22px, 1);
+  @include trailer;
+  padding-left: 1rem;
+  background-color: palette(gray);
+  color: palette(white);
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  &::-webkit-input-placeholder {
+     color: palette(white);
+     font-style: italic;
+     font-weight: 300;
+  }
+  &:-moz-placeholder {
+     color: palette(white);
+     font-style: italic;
+     font-weight: 300;  
+  }
+  &::-moz-placeholder {
+     color: palette(white);
+     font-style: italic;
+     font-weight: 300;  
+  }
+  &:-ms-input-placeholder {  
+     color: palette(white);
+     font-style: italic;
+     font-weight: 300;  
+  }
+}

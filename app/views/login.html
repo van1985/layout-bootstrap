@@ -1,0 +1,20 @@
+<div class="page-login">
+
+  <img class="logo" src="images/logo.png" alt="">
+
+  <div class="login-credentials-title">call<em>sears</em></div>
+
+  <form class="" ng-submit="login()" novalidate>
+    <input type="text" class="input-login" placeholder="enterprise ID" ng-model="user.name" required>
+    <input type="password" class="input-login" placeholder="enterprise password" ng-model="user.password" required>
+    <!-- <div class="radio col-md-offset-2 col-md-6" ng-repeat="department in departments">
+      <label>
+        <input type="checkbox" name="selectedDepartments[]" value="{{department.id}}" 
+        ng-checked="selection.indexOf(department.id) > -1"
+        ng-click="toggleSelection(department.id)"> {{ department.displayName }} <br/>
+      </label>
+    </div> -->
+    <button type="submit" class="btn-login">log in</button>
+  </form>
+
+</div>

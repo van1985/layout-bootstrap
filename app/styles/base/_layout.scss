@@ -1,0 +1,211 @@
+html, body, .app , div[ng-view=""], .main {
+  height: 100%;
+}
+
+body {
+  font-family: $font-sans-serif;
+  color: palette(black);
+  background-color: palette(gray, lighter);
+}
+
+.main {
+  @include container;
+  padding-top: $base-line-height*3;
+}
+
+.content {
+  min-height: 100%;
+  position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.contact-page {
+  .content {
+    @include span(last 70%);
+  }
+}
+
+.tabs {
+  @include bleed(0 1rem 0 1rem);
+  @include clearfix;
+  min-height: $base-line-height*3;
+  background-color: palette(gray, light);
+  vertical-align: middle;
+  .info {
+    font-size: 50px;
+  }
+  .tab {
+    @include leader(.5);
+    @include trailer(.5);
+    @include adjust-leading-to(2);
+    @include border-radius($base-line-height/2);
+    float: left;
+    margin-right: 1rem;
+    background-color: palette(gray);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: inline-block;
+    border: 1px solid palette(gray, dark);
+    &.selected {
+      background-color: palette(skyblue, dark);
+      color: palette(white);
+      border: 1px solid palette(gray, dark);
+    }
+  }
+  .search-box {
+    position: relative;
+    float: right;
+    input {
+      @include leader(.5);
+      @include adjust-leading-to(2);
+      @include border-radius($base-line-height);
+      padding-left: 1rem;
+      padding-right: 1rem;
+      border: none;
+      background-color: palette(gray);
+      color: palette(white);
+      &::-webkit-input-placeholder {
+         color: palette(gray, dark);
+         font-style: italic;
+         font-weight: 300;
+      }
+      &:-moz-placeholder {
+         color: palette(gray, dark);
+         font-style: italic;
+         font-weight: 300;  
+      }
+      &::-moz-placeholder {
+         color: palette(gray, dark);
+         font-style: italic;
+         font-weight: 300;  
+      }
+      &:-ms-input-placeholder {  
+         color: palette(gray, dark);
+         font-style: italic;
+         font-weight: 300;  
+      }
+    }
+    .fa-search {
+      @include adjust-font-size-to($font-size-large);
+      color: palette(white);
+      position: absolute;
+      right: 1rem;
+      top: 0.8rem;
+    }
+  }
+}
+
+.contacts {
+  @include clearfix;
+  .contact {
+    @include gallery(1 of 2);
+    @include adjust-leading-to(2);
+    .fa {
+      margin-right: 1rem;
+
+      &.controls {
+        margin-left: 1rem;
+        margin-right: 0;
+        cursor: pointer;
+      }
+    }
+    &.online {
+      .fa {
+        color: palette(green);
+      }
+    }
+    &.offline {
+      .fa {
+        color: palette(gray);
+      }
+    }
+    &.busy {
+      .fa {
+        color: palette(yellow);
+      }
+    }
+    &.away {
+      .fa {
+        color: palette(orange);
+      }
+    }
+  }
+}
+
+.messages {
+  margin: 0;
+  padding: 0;
+}
+
+.message {
+  @include bleed(0 1rem 0 1rem);
+  @include rhythm-padding(.5);
+  @include no-bullets;
+  position: relative;
+  &.recipient {
+    background-color: darken(palette(gray, lighter), 5%);
+  }  
+}
+
+.message-content {
+  @include adjust-font-size-to($font-size-medium, 1);
+  max-width: 90%;
+}
+
+.message-time {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+}
+
+.chat-box {
+  @include bleed(0 1rem 0 1rem);
+  @include rhythm-padding(.5);
+  width: 100%;
+  background-color: palette(gray, light);
+  position: absolute;
+  bottom: 0;
+  input {
+    min-height: $base-line-height*2;
+    width: 90%;
+  }
+}
+
+.btn-call-contact, .btn-hold, .btn-transfer, .btn-hangup {
+  @include adjust-font-size-to($font-size-large, 2);
+  @include border-radius($base-line-height/2);
+  position: absolute;
+  top: $base-line-height/2;
+  right: 1rem;
+  text-align: center;
+  width: 60px;
+  border: 1px solid palette(gray, dark);
+  background-color: palette(green);
+  cursor: pointer;
+}
+.btn-hold {
+  right: 9rem;
+  background-color: palette(grey);
+}
+.btn-transfer {
+  right: 5rem;
+  background-color: palette(grey);
+}
+.btn-hangup {
+  right: 1rem;
+  background-color: palette(red);
+}
+
+.contact-info {
+  .fa {
+    @include adjust-font-size-to($font-size-large*2, 3);
+    float: left;
+  }
+  .contact-name, .contact-number {
+    padding-left: 3rem;
+  }
+  .contact-name {
+    @include adjust-font-size-to($font-size-xlarge);
+  }
+}

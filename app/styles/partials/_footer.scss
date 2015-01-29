@@ -1,0 +1,21 @@
+.footer {
+  @include adjust-leading-to(3);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+	background-color: transparentize(palette(black), .1);
+  text-align: right;
+}
+
+.btn-apply {
+  @include adjust-font-size-to(22px, 2);
+  @include border-radius($base-line-height/2);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: inline-block;
+  background-color: palette(skyblue, dark);
+  color: palette(white);
+  margin-right: 1rem;
+  vertical-align: middle;
+  border: none;
+}

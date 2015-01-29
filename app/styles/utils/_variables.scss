@@ -1,0 +1,64 @@
+$phone: 768px;
+$tablet: 992px;
+$desktop: 1200px;
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+$rhythm-unit: 'rem';
+$rem-with-px-fallback: true;
+
+$font-size-normal: $base-font-size;
+$font-size-medium: 18px;
+$font-size-large: 22px;
+$font-size-xlarge: 28px;
+
+$font-sans-serif: 'Lato', sans-serif;
+
+$_color-base-black: #222;
+$_color-base-white: #fff;
+
+$_color-base-yellow: #F4D03F;
+$_color-base-green: #26A65B;
+$_color-base-red: #D91E18;
+$_color-base-orange: #EB9532;
+$_color-base-sky-blue: #B3D2F0;
+
+$palettes: (
+  yellow: (
+    base:   $_color-base-yellow,
+    light:  lighten($_color-base-yellow, 10%),
+    dark:   darken($_color-base-yellow, 10%)
+  ),
+  skyblue: (
+    base:   $_color-base-sky-blue,
+    light:  lighten($_color-base-sky-blue, 10%),
+    dark:   darken($_color-base-sky-blue, 20%)
+  ),
+  green: (
+    base:   $_color-base-green,
+    light:  lighten($_color-base-green, 10%),
+    dark:   darken($_color-base-green, 10%)
+  ),
+  red: (
+    base:   $_color-base-red,
+    light:  lighten($_color-base-red, 10%),
+    dark:   darken($_color-base-red, 10%)
+  ),
+  orange: (
+    base:   $_color-base-orange,
+    light:  lighten($_color-base-orange, 10%),
+    dark:   darken($_color-base-orange, 10%)
+  ),
+  black: (
+    base:   $_color-base-black
+  ),
+  gray: (
+    dark: lighten($_color-base-black, 25%),
+    base:   lighten($_color-base-black, 50%),
+    light:  lighten($_color-base-black, 75%),
+    lighter:  lighten($_color-base-black, 85%)
+  ),
+  white: (
+    base:   $_color-base-white
+  )
+);
