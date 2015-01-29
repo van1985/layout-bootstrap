@@ -14,4 +14,8 @@ angular.module('storeManagerApp')
       'AngularJS',
       'Karma'
     ];
+
+    $scope.changeTab = function (tab) {
+    	$scope.tab = tab;
+    };
   });
