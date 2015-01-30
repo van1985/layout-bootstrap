@@ -16,24 +16,18 @@ angular.module('storeManagerApp')
 		                tickThickness: 0,
 		                lineThickness: 0,
 		                valueFormatString: " ",
-		                gridThickness: 0 ,
-		                labelFontFamily: "helvetica"
+		                gridThickness: 0         
 		            },
 		            axisX: {
 		                tickThickness: 0,
-		                lineThickness: 1,
-		                labelFontSize: 15,
-		                labelFontColor: "black",
+		                lineThickness: 0,
+		                labelFontSize: 20,
+		                labelFontColor: "#999999",
 		                labelFontFamily: "helvetica",
-		                labelFontWeight: "normal"
+		                gridThickness: 0 
 		            },
 		            data: [
 			            {
-							indexLabelFontSize: 16,
-					        indexLabelFontFamily: "helvetica",
-					        indexLabelFontColor: "#999999",
-					        indexLabelFontWeight: "normal",
-					        indexLabelFontStyle: "normal",
 			                type: "bar",
 			                dataPoints: [
 			                    { y: 15, label: "Missed", color: "#339966", indexLabelFontFamily:"helvetica",indexLabelFontColor:"white", indexLabel:"15           ", indexLabelPlacement: "inside" },
