@@ -8,7 +8,7 @@ angular.module('storeManagerApp')
 
 				$scope.chart = new CanvasJS.Chart($attrs.id, {
 					theme: 'theme2',
-					height: 240,
+					height: 150,
 					width: 500,
 					backgroundColor: null,
 		            animationEnabled: true,
@@ -22,7 +22,8 @@ angular.module('storeManagerApp')
 		                tickThickness: 0,
 		                lineThickness: 0,
 		                labelFontSize: 15,
-		                labelFontColor: "black"
+		                labelFontColor: "black",
+		                interval: 1
 		            },
 		            data: [
 			            {
