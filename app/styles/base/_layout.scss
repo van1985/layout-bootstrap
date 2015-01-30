@@ -18,14 +18,14 @@ body {
   position: relative;
 
   .filters {
-    height: 5em;
+    height: 4em;
     background-color: #dcdcdc;
 
     button {
-      margin: 12px 0px 15px 25px;
+      margin: 10px 0px 15px 25px;
       border-radius: 10px;
       border: 1px solid black;
-      height: 44px;
+      height: 36px;
       padding-left: 15px;
       padding-right: 15px;
       background-color: lightgrey;
@@ -39,73 +39,71 @@ body {
   }
 
   .sub-content-1 {
-    height: 24em;
+    height: 16em;
     background-color: #f8f8f8;
-    padding: 1rem;
+    padding: 10px;
 
     .chart-container {
       float: left;
       width: 100%;
-      height: 300px;
+      height: 11em;
       border-bottom: 1px solid #666666;
       margin-bottom: 2px;
 
       tittle {
         font-weight: bold;
-        font-size: x-large;
+        font-size: large;
       }
     }
 
     .details-container {
-      padding: 5px;
       color: #666666;
 
       .detail {
         float: left;
         height: 4em;
-        width: 16em;
-        padding: 6px;
-        margin-left: 30px;
+        width: 14em;
 
         &:not(:first-child) {
           border-left: 1px solid #666666;
         }
 
-        title {
+        tittle {
+          font-size: smaller;
           float: left;
           width: 100%;
-          height: 12px;
+          height: 1em;
+          margin-left: 1em;
         }
 
         .number {
           font-size: x-large;
           font-weight: bold;
-          margin-left: 23px;
+          margin-left: 2em;
         }
       }
     }
   }
 
   .sub-content-2 {
+    margin-top: 1em;
+
     .chart-container {
       float: left;
-      height: 300px;
-      width: 300px;
-      margin-left: 10px;
+      height: 15em;
+      width: 13em;
 
       &:not(:first-child) {
-        border-left: 1px solid lightGrey;
+        border-left: 2px solid lightGrey;
         margin-left: 130px;
       }
 
       tittle {
-        font-weight: bold;
-        font-size: x-large;
-        margin-left: 10px;
+        margin-left: 1em;
       }
 
       .chart {
-        margin-left: -70px;
+        margin-left: -120px;
       }
     }
 
