@@ -23,7 +23,8 @@ angular.module('storeManagerApp')
             			var dataPoint = {
             				y: $scope.chartData[i].callsAmount,
             				indexLabel: $scope.chartData[i].departmentId,
-            				indexLabelMaxWidth: 120
+            				indexLabelMaxWidth: 120,
+            				label: $scope.chartData[i].callsAmount
             			};
 
             			var color;
@@ -53,7 +54,7 @@ angular.module('storeManagerApp')
 			            data: [
 							{
 								type: "doughnut",
-								indexLabelFontSize: 16,
+								indexLabelFontSize: 13,
 						        indexLabelFontFamily: "helvetica",
 						        indexLabelFontColor: "#999999",
 						        indexLabelFontWeight: "normal",
