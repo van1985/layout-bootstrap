@@ -51,10 +51,10 @@ angular.module('storeManagerApp')
 				            {
 				                type: "bar",
 				                dataPoints: [
-				                    { y: $scope.chartData.missed, label: "Missed", color: "#339966", indexLabelFontFamily:"helvetica",indexLabelFontColor:"white", indexLabel: getIndexLabel($scope.chartData.missed), indexLabelPlacement: "inside" },
-				                    { y: $scope.chartData.transferred, label: "Transferred", color: "#99CC66", indexLabelFontFamily:"helvetica",indexLabelFontColor:"white", indexLabel:getIndexLabel($scope.chartData.transferred), indexLabelPlacement: "inside" },
-				                    { y: $scope.chartData.answered, label: "Answered", color: "#3399CC", indexLabelFontFamily:"helvetica",indexLabelFontColor:"white", indexLabel:getIndexLabel($scope.chartData.answered), indexLabelPlacement: "inside" },
-				                    { y: $scope.chartData.incoming, label: "Incoming", color: "#99CCCC", indexLabelFontFamily:"helvetica",indexLabelFontColor:"white", indexLabel:getIndexLabel($scope.chartData.incoming), indexLabelPlacement: "inside" }
+				                    { y: $scope.chartData.missed, label: "Missed", color: "#339966", indexLabelFontFamily:"helvetica",indexLabelFontColor:"white", indexLabel: getIndexLabel($scope.chartData.missed), indexLabelPlacement: "inside",indexLabelFontSize: 15 },
+				                    { y: $scope.chartData.transferred, label: "Transferred", color: "#99CC66", indexLabelFontFamily:"helvetica",indexLabelFontColor:"white", indexLabel:getIndexLabel($scope.chartData.transferred), indexLabelPlacement: "inside",indexLabelFontSize: 15 },
+				                    { y: $scope.chartData.answered, label: "Answered", color: "#3399CC", indexLabelFontFamily:"helvetica",indexLabelFontColor:"white", indexLabel:getIndexLabel($scope.chartData.answered), indexLabelPlacement: "inside" ,indexLabelFontSize: 15},
+				                    { y: $scope.chartData.incoming, label: "Incoming", color: "#99CCCC", indexLabelFontFamily:"helvetica",indexLabelFontColor:"white", indexLabel:getIndexLabel($scope.chartData.incoming), indexLabelPlacement: "inside" ,indexLabelFontSize: 15}
 				                ]
 				            }
 			            ]
