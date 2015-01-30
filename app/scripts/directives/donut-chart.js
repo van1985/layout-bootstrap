@@ -28,11 +28,16 @@ angular.module('storeManagerApp')
 		            data: [
 						{
 							type: "doughnut",
+							indexLabelFontSize: 16,
+					        indexLabelFontFamily: "helvetica",
+					        indexLabelFontColor: "#999999",
+					        indexLabelFontWeight: "normal",
+					        indexLabelFontStyle: "normal",
 							dataPoints: [
-								{  y: 32, indexLabel: "Books & Magazines" },
-								{  y: 36, indexLabel: "Gifts" },		
-								{  y: 17, indexLabel: "Clothing, Shoes & Jewelry" },						
-								{  y: 2, indexLabel: "All Other Departament" }
+								{  y: 32, indexLabel: "Books & Magazines",color: "#66CCCC", indexLabelLineColor: "66CCCC" },
+								{  y: 36, indexLabel: "Gifts", color: "#339966", indexLabelLineColor: "339966" },		
+								{  y: 17, indexLabel: "Clothing, Shoes & Jewelry", color: "#666666", indexLabelLineColor: "666666" },						
+								{  y: 2, indexLabel: "All Other Departament", color: "#99CC66", indexLabelLineColor: "99CC66" }
 							]
 						}
 					]
