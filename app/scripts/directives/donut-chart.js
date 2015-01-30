@@ -23,8 +23,7 @@ angular.module('storeManagerApp')
             			var dataPoint = {
             				y: $scope.chartData[i].callsAmount,
             				indexLabel: $scope.chartData[i].departmentId,
-            				indexLabelMaxWidth: 120,
-            				label: $scope.chartData[i].callsAmount
+            				indexLabelMaxWidth: 120
             			};
 
             			var color;
