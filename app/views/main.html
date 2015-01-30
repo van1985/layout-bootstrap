@@ -7,7 +7,7 @@
 <div class="main contact-page">
   <div class="sidebar">
     <div class="sidebar-item" ng-class="{selected: tab == 'stats'}" ng-click="changeTab('stats')">
-      <span class="fa fa-area-chart"></span>
+      <span class="fa fa-area-chart" style="display: none;"></span>
       <img src="images/statics_button.png" alt>
       <span>Statistics</span>
     </div>
@@ -15,7 +15,7 @@
   <!-- STATISTICS -->
   <div class="content" ng-show="tab == 'stats'">
     <div class="filters">
-      <input type="checkbox" id="0" value="APLIANCES" name="selectedDepartments[]" />
+      <button class="selected">Daily</button>
       <button>Weekly</button>
       <button>Monthly</button>
     </div>
