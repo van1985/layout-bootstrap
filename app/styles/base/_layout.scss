@@ -91,12 +91,12 @@ body {
   .sub-content-2 {
     margin-top: 2em;
     height: 18em;
-    overflow: hidden;
 
     .chart-container {
       float: left;
-      height: 15em;
+      height: 16em;
       width: 25em;
+      overflow: hidden;
 
       &:not(:first-child) {
         border-left: 2px solid lightGrey;
@@ -105,6 +105,11 @@ body {
       tittle {
         color: #666666;
         margin-left: 1em;
+      }
+
+      .chart {
+        height: 16em;
+        width: 25em;
       }
     }
 
