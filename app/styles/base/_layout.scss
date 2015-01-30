@@ -93,20 +93,15 @@ body {
     .chart-container {
       float: left;
       height: 15em;
-      width: 16em;
+      width: 25em;
 
       &:not(:first-child) {
         border-left: 2px solid lightGrey;
-        margin-left: 130px;
       }
 
       tittle {
         color: #666666;
         margin-left: 1em;
-      }
-
-      .chart {
-        margin-left: -130px;
       }
     }
 

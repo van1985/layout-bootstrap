@@ -14,16 +14,18 @@ angular.module('storeManagerApp')
 		            animationEnabled: true,
 		            axisY: {
 		                tickThickness: 0,
-		                lineThickness: 3,
+		                lineThickness: 0,
 		                valueFormatString: " ",
-		                gridThickness: 0           
+		                gridThickness: 0 ,
+		                labelFontFamily: "helvetica"
 		            },
 		            axisX: {
 		                tickThickness: 0,
-		                lineThickness: 0,
+		                lineThickness: 1,
 		                labelFontSize: 15,
 		                labelFontColor: "black",
-		                interval: 1
+		                labelFontFamily: "helvetica",
+		                labelFontWeight: "normal"
 		            },
 		            data: [
 			            {
@@ -34,10 +36,10 @@ angular.module('storeManagerApp')
 					        indexLabelFontStyle: "normal",
 			                type: "bar",
 			                dataPoints: [
-			                    { y: 15, label: "Missed", color: "#339966"},
-			                    { y: 6, label: "Transferred", color: "#99CC66" },
-			                    { y: 32, label: "Answered", color: "#3399CC" },
-			                    { y: 78, label: "Incoming", color: "#99CCCC", indexLabelFontFamily:"helvetica",indexLabelFontColor:"white", indexLabel:"78" }
+			                    { y: 15, label: "Missed", color: "#339966", indexLabelFontFamily:"helvetica",indexLabelFontColor:"white", indexLabel:"15           ", indexLabelPlacement: "inside" },
+			                    { y: 6, label: "Transferred", color: "#99CC66", indexLabelFontFamily:"helvetica",indexLabelFontColor:"white", indexLabel:"6  ", indexLabelPlacement: "inside" },
+			                    { y: 32, label: "Answered", color: "#3399CC", indexLabelFontFamily:"helvetica",indexLabelFontColor:"white", indexLabel:"32                            ", indexLabelPlacement: "inside" },
+			                    { y: 78, label: "Incoming", color: "#99CCCC", indexLabelFontFamily:"helvetica",indexLabelFontColor:"white", indexLabel:"78                                                                              ", indexLabelPlacement: "inside" }
 			                ]
 			            }
 		            ]
