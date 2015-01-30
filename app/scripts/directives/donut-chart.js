@@ -8,8 +8,7 @@ angular.module('storeManagerApp')
 
 				$scope.chart = new CanvasJS.Chart($attrs.id, {
 					theme: 'theme2',
-					height: 150,
-					width: 500,
+					height: 250,
 					backgroundColor: null,
 		            animationEnabled: true,
 		            axisY: {
@@ -34,10 +33,10 @@ angular.module('storeManagerApp')
 					        indexLabelFontWeight: "normal",
 					        indexLabelFontStyle: "normal",
 							dataPoints: [
-								{  y: 32, indexLabel: "Books & Magazines",color: "#66CCCC", indexLabelLineColor: "66CCCC" },
-								{  y: 36, indexLabel: "Gifts", color: "#339966", indexLabelLineColor: "339966" },		
-								{  y: 17, indexLabel: "Clothing, Shoes & Jewelry", color: "#666666", indexLabelLineColor: "666666" },						
-								{  y: 2, indexLabel: "All Other Departament", color: "#99CC66", indexLabelLineColor: "99CC66" }
+								{  y: 32, indexLabel: "Books & Magazines",color: "#66CCCC", indexLabelLineColor: "66CCCC", indexLabelMaxWidth: 120, indexLabelWrap: true },
+								{  y: 36, indexLabel: "Gifts", color: "#339966", indexLabelLineColor: "339966", indexLabelMaxWidth: 120, indexLabelWrap: true },		
+								{  y: 17, indexLabel: "Clothing, Shoes & Jewelry", color: "#666666", indexLabelLineColor: "666666", indexLabelMaxWidth: 120, indexLabelWrap: true },						
+								{  y: 2, indexLabel: "All Other Departament", color: "#99CC66", indexLabelLineColor: "99CC66", indexLabelMaxWidth: 120, indexLabelWrap: true }
 							]
 						}
 					]
