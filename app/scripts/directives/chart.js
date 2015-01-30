@@ -16,14 +16,16 @@ angular.module('storeManagerApp')
 		                tickThickness: 0,
 		                lineThickness: 0,
 		                valueFormatString: " ",
-		                gridThickness: 0           
+		                gridThickness: 0 ,
+		                labelFontFamily: "helvetica"
 		            },
 		            axisX: {
 		                tickThickness: 0,
 		                lineThickness: 1,
 		                labelFontSize: 15,
 		                labelFontColor: "black",
-		                interval: 1
+		                labelFontFamily: "helvetica",
+		                labelFontWeight: "normal"
 		            },
 		            data: [
 			            {
