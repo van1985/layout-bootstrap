@@ -8,7 +8,7 @@ angular.module('storeManagerApp')
 
 				$scope.chart = new CanvasJS.Chart($attrs.id, {
 					theme: 'theme2',
-					height: 150,
+					height: 250,
 					width: 500,
 					backgroundColor: null,
 		            animationEnabled: true,
