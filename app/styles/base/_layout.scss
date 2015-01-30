@@ -50,6 +50,7 @@ body {
       height: 19em;
       border-bottom: 1px solid #666666;
       margin-bottom: 2px;
+      overflow: hidden;
 
       tittle {
         font-weight: bold;
@@ -89,6 +90,8 @@ body {
 
   .sub-content-2 {
     margin-top: 2em;
+    height: 18em;
+    overflow: hidden;
 
     .chart-container {
       float: left;
