@@ -26,18 +26,17 @@ angular.module('storeManagerApp')
 		            },
 		            data: [
 			            {
-			                indexLabelFontSize: 20,
-			                indexLabelPlacement: "inside",
-			                indexLabelFontColor: "white",
-			                indexLabelFontFamily: "Arial",
-			                labelFontColor: "black",
-			                indexLabelFontWeight: 300,
+							indexLabelFontSize: 16,
+					        indexLabelFontFamily: "helvetica",
+					        indexLabelFontColor: "#999999",
+					        indexLabelFontWeight: "normal",
+					        indexLabelFontStyle: "normal",
 			                type: "bar",
 			                dataPoints: [
-			                    { y: 21, label: "Missed", indexLabel: "15" },
-			                    { y: 25, label: "Transferred", indexLabel: "6" },
-			                    { y: 33, label: "Answered", indexLabel: "32" },
-			                    { y: 36, label: "Incoming", indexLabel: "78" }
+			                    { y: 15, label: "Missed", color: "#339966"},
+			                    { y: 6, label: "Transferred", color: "#99CC66" },
+			                    { y: 32, label: "Answered", color: "#3399CC" },
+			                    { y: 78, label: "Incoming", color: "#99CCCC", indexLabelFontFamily:"helvetica",indexLabelFontColor:"white", indexLabel:"78" }
 			                ]
 			            }
 		            ]
