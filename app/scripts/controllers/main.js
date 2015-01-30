@@ -8,7 +8,7 @@
  * Controller of the storeManagerApp
  */
 angular.module('storeManagerApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($scope, StatisticsSrv) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -16,6 +16,13 @@ angular.module('storeManagerApp')
     ];
 
     $scope.tab = 'stats';
+
+    StatisticsSrv.getStatistics()
+    	.then(
+    		function (stats) {
+    			$scope.stats = stats;
+    		}
+		);
 
     $scope.changeTab = function (tab) {
     	$scope.tab = tab;
