@@ -40,14 +40,14 @@ body {
   }
 
   .sub-content-1 {
-    height: 16em;
+    height: 25em;
     background-color: #f8f8f8;
     padding: 10px;
 
     .chart-container {
       float: left;
       width: 100%;
-      height: 11em;
+      height: 19em;
       border-bottom: 1px solid #666666;
       margin-bottom: 2px;
 
@@ -62,7 +62,7 @@ body {
 
       .detail {
         float: left;
-        height: 4em;
+        height: 5em;
         width: 16em;
 
         &:not(:first-child) {
@@ -75,6 +75,7 @@ body {
           width: 100%;
           height: 1em;
           margin-left: 1em;
+          margin-top: 1em;
         }
 
         .number {
@@ -87,7 +88,7 @@ body {
   }
 
   .sub-content-2 {
-    margin-top: 1em;
+    margin-top: 2em;
 
     .chart-container {
       float: left;
