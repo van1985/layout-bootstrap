@@ -63,7 +63,7 @@ body {
       .detail {
         float: left;
         height: 4em;
-        width: 14em;
+        width: 16em;
 
         &:not(:first-child) {
           border-left: 1px solid #666666;
@@ -92,7 +92,7 @@ body {
     .chart-container {
       float: left;
       height: 15em;
-      width: 13em;
+      width: 16em;
 
       &:not(:first-child) {
         border-left: 2px solid lightGrey;
@@ -105,7 +105,7 @@ body {
       }
 
       .chart {
-        margin-left: -120px;
+        margin-left: -130px;
       }
     }
 
