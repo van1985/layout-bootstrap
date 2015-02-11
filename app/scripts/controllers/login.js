@@ -14,4 +14,30 @@ angular.module('storeManagerApp')
             $location.path('/main');
         };
 
+        var selected = {
+        	tools: false,
+        	lawndry: false,
+        	sports: false,
+        	jewelry: false,
+        	garden: false,
+        	kitchen: false
+        };
+
+        $scope.toggleSelected = function(option) {
+        	selected[option] = !selected[option];
+        };
+
+        $scope.hasSelected = function(option) {
+        	return selected[option];
+        };
+
+        $scope.isLoginEnabled = function() {
+        	var enabled = false;
+        	angular.forEach(selected, function(value, key) {
+        		if (value) {
+        			enabled = true;
+        		}
+        	})
+        	return enabled;
+        };
   }]);
