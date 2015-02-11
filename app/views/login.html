@@ -1,20 +1,45 @@
-<div class="page-login">
+<div class="login" ng-class="{ pt20 : isLoginEnabled() }">
+  <form ng-submit="login()" novalidate>
+    <div class="options-container">
+      <div class="one-row">
+        <div class="option">
+          <div class="tools" ng-class="{ green : hasSelected('tools') }" ng-click="toggleSelected('tools')"></div>
+        </div>
+      </div>
+      <div class="three-row h155">
+        <div class="option">
+          <div class="lawndry" ng-class="{ green : hasSelected('lawndry') }" ng-click="toggleSelected('lawndry')"></div>
+        </div>
 
-  <img class="logo" src="images/logo.png" alt="">
+        <div class="logo-small"></div>
 
-  <div class="login-credentials-title">call<em>sears</em></div>
-
-  <form class="" ng-submit="login()" novalidate>
-    <input type="text" class="input-login" placeholder="enterprise ID" ng-model="user.name" required>
-    <input type="password" class="input-login" placeholder="enterprise password" ng-model="user.password" required>
-    <!-- <div class="radio col-md-offset-2 col-md-6" ng-repeat="department in departments">
-      <label>
-        <input type="checkbox" name="selectedDepartments[]" value="{{department.id}}" 
-        ng-checked="selection.indexOf(department.id) > -1"
-        ng-click="toggleSelection(department.id)"> {{ department.displayName }} <br/>
-      </label>
-    </div> -->
-    <button type="submit" class="btn-login">log in</button>
+        <div class="option">
+          <div class="sports" ng-class="{ green : hasSelected('sports') }" ng-click="toggleSelected('sports')"></div>
+        </div>
+      </div>
+      <div class="three-row">
+        <div class="option">
+          <div class="jewelry" ng-class="{ green : hasSelected('jewelry') }" ng-click="toggleSelected('jewelry')"></div>
+        </div>
+        <div class="button-container" ng-show="isLoginEnabled()">
+          <button type="submit" class="login-button">log in</button>
+        </div>
+        <div class="button-container" ng-show="!isLoginEnabled()">
+          <span>COM</span><span class="green">SEARS</span>
+        </div>
+        <div class="option">
+          <div class="kitchen" ng-class="{ green : hasSelected('kitchen') }" ng-click="toggleSelected('kitchen')"></div>
+        </div>
+      </div>
+      <div class="one-row">
+        <div class="option">
+          <div class="garden" ng-class="{ green : hasSelected('garden') }" ng-click="toggleSelected('garden')"></div>
+        </div>
+      </div>
+    </div>
+    <div class="credentials-container" ng-show="isLoginEnabled()">
+      <input type="text" class="input-login" placeholder="enterprise ID" ng-model="user.name" required>
+      <input type="password" class="input-login" placeholder="enterprise password" ng-model="user.password" required>
+    </div>
   </form>
-
 </div>

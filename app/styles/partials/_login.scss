@@ -1,82 +1,158 @@
-.page-login {
-  @include container;
-}
-
-.logo {
-  @include rhythm;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 200px;
-}
-
 .login {
+  height: 100%;
   padding-top: $base-line-height*2;
-}
+  background-color: #1775bb;
 
-.user-icon {
-  font-size: 72px;
-  margin: {
-    top: 40px;
-    bottom: 20px;
-  };
-}
+  &.pt20 {
+    padding-top: 20px;
+  }
 
-.login-credentials-title {
-  @include adjust-font-size-to(36px);
-  @include trailer;
-  font-weight: 300;
-  text-align: center;
-  em {
-    font-style: normal;
-    font-weight: 400;
-  }
-}
+  .options-container {
+    margin: 11px;
+    background: url('../images/circle.png');
 
-.btn-login {
-  @include adjust-font-size-to(22px, 2);
-  @include border-radius($base-line-height/2);
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  min-width: 120px;
-  background-color: palette(green, light);
-  border: none;
-  color: palette(white);
-  border: none;
-}
+    .one-row {
+      height: 59px;
+      padding-bottom: 70px;
 
-.input-login {
-  @include padding-leader(.5);
-  @include padding-trailer(.5);
-  @include border-radius($base-line-height);
-  @include adjust-font-size-to(22px, 1);
-  @include trailer;
-  padding-left: 1rem;
-  background-color: palette(gray);
-  color: palette(white);
-  border: none;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  &::-webkit-input-placeholder {
-     color: palette(white);
-     font-style: italic;
-     font-weight: 300;
+      .option {
+        width: 100%;
+        text-align: -webkit-center;
+      }
+    }
+    .three-row {
+      height: 75px;
+      padding-bottom: 75px;
+
+      .option {
+        float: left;
+        width: 31%;
+
+        &:last-child {
+          div {
+            float: right;
+          }
+        }
+      }
+    }
+
+    .logo-small {
+      height: 82px;
+      width: 109px;
+      float: left;
+      background: url("../images/logo-small.png");
+      margin-top: 30px;
+    }
+
+    .h155 {
+      height: 155px;
+    }
+
+
+
+    .button-container {
+      width: 113px;
+      float: left;
+      text-align: -webkit-center;
+      font-size: x-large;
+      color: palette(white);
+
+      .green {
+        color: #32c960;
+      }
+
+      .login-button {
+        @include adjust-font-size-to(22px, 2);
+        @include border-radius($base-line-height/2);
+        width: 110px;
+        margin: 0 0 0 0;
+        display: block;
+        background-color: palette(green, light);
+        border: none;
+        
+        border: none;
+      }
+    }
+
+    .option {
+      div {
+        width: 59px;
+        height: 59px;
+      }
+      .tools {
+        background: url('../images/tools.png');
+        &.green {
+          background: url('../images/tools-green.png');
+        }
+      }
+      .lawndry {
+        background: url('../images/lawndry.png');
+        &.green {
+          background: url('../images/lawndry-green.png');
+        }
+      }
+      .sports {
+        background: url('../images/sports.png');
+        &.green {
+          background: url('../images/sports-green.png');
+        }
+      }
+      .jewelry {
+        background: url('../images/jewelry.png');
+        &.green {
+          background: url('../images/jewelry-green.png');
+        }
+      }
+      .kitchen {
+        background: url('../images/kitchen.png');
+        &.green {
+          background: url('../images/kitchen-green.png');
+        }
+      }
+      .garden {
+        background: url('../images/garden.png');
+        &.green {
+          background: url('../images/garden-green.png');
+        }
+      }
+    }
+
   }
-  &:-moz-placeholder {
-     color: palette(white);
-     font-style: italic;
-     font-weight: 300;  
-  }
-  &::-moz-placeholder {
-     color: palette(white);
-     font-style: italic;
-     font-weight: 300;  
-  }
-  &:-ms-input-placeholder {  
-     color: palette(white);
-     font-style: italic;
-     font-weight: 300;  
+
+  .credentials-container {
+    .input-login {
+      @include padding-leader(.5);
+      @include padding-trailer(.5);
+      @include border-radius($base-line-height);
+      @include adjust-font-size-to(22px, 1);
+      @include trailer;
+      padding-left: 1rem;
+      background-color: palette(gray);
+      color: palette(white);
+      border: none;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      &::-webkit-input-placeholder {
+         color: palette(white);
+         font-style: italic;
+         font-weight: 300;
+      }
+      &:-moz-placeholder {
+         color: palette(white);
+         font-style: italic;
+         font-weight: 300;  
+      }
+      &::-moz-placeholder {
+         color: palette(white);
+         font-style: italic;
+         font-weight: 300;  
+      }
+      &:-ms-input-placeholder {  
+         color: palette(white);
+         font-style: italic;
+         font-weight: 300;  
+      }
+    }
   }
 }
