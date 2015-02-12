@@ -1,61 +1,52 @@
-<div class="header">
-    <header>
-        <img class="header-logo" src="images/logo.png" alt="">
-        <div class="header-title">call<em>sears</em></div>     
-    </header>
-</div>
-<div class="main contact-page">
-  <div class="sidebar">
-    <div class="sidebar-item" ng-class="{selected: tab == 'stats'}" ng-click="changeTab('stats')">
-      <span class="fa fa-area-chart" style="display: none;"></span>
-      <img src="images/statics_button.png" alt>
-      <span>Statistics</span>
+<header>
+  <div class="header-content">
+    <div class="user">
+      <div class="headset"></div>
+      <div class="info">
+        <span class="name">Agustin Veloso</span>
+        <span class="status">Online</span>
+      </div>
+    </div>
+    <div class="menu"></div>
+  </div>
+  <div class="tabs-container">
+    <div class="tab" ng-class="{ selected: isSelected('chat')}" ng-click="selectTab('chat');">
+      <div class="chat"></div>
+    </div>
+    <div class="tab" ng-class="{ selected: isSelected('contacts')}" ng-click="selectTab('contacts');">
+      <div class="contacts"></div>
     </div>
   </div>
-  <!-- STATISTICS -->
-  <div class="content" ng-show="tab == 'stats'">
-    <div class="filters">
-      <button class="selected">Daily</button>
-      <button>Weekly</button>
-      <button>Monthly</button>
+</header>
+<div class="content">
+  <div class="tab-content" ng-show="isSelected('chat')">
+    <div class="notifications">
+      <title>Notifications</title>
+      <div class="erase"></div>
+      <div class="quantity"></div>
     </div>
-    <div class="sub-content-1">
-      <div class="chart-container">
-        <tittle>Calls</tittle>
-        <div id="allCallsChart" class="chart" chart stats="stats.calls"></div>
-      </div>
-      <div class="details-container">
-        <div class="detail">
-          <tittle></tittle>
-          <span class="number">{{ stats.average.byDay }}</span>
-          <span>Calls</span>
-        </div>
-        <div class="detail">
-          <tittle>Average</tittle>
-          <span class="number">{{ stats.average.byHour }}</span>
-          <span>Call/Hs</span>
-        </div>
-        <div class="detail">
-          <tittle>Average</tittle>
-          <span class="number">{{ stats.average.byMinute}}</span>
-          <span>Call/Min</span>
-        </div>
+    <div class="messages">
+      <div class="message">
+        <div class="contact-image"></div>
+        <div class="message-content">
+          <span class="from">From: Cecilia Gauna</span>
+          <span class="message-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </span>
       </div>
     </div>
-    <div class="sub-content-2">
-      <div class="chart-container">
-        <tittle>Incoming Calls</tittle>
-        <div id="incomingCallsChart" class="chart" donut-chart stats="stats.mostCalledDepartments"></div>
+    <div class="message">
+        <div class="contact-image"></div>
+        <div class="message-content">
+          <span class="from">From: Cecilia Gauna</span>
+          <span class="message-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </span>
       </div>
-      <div class="chart-container">
-        <tittle>Answered Calls</tittle>
-        <div id="answeredCallsChart" class="chart" donut-chart stats="stats.mostAnsweredDepartments"></div>
+    </div>
+    <div class="message">
+        <div class="contact-image"></div>
+        <div class="message-content">
+          <span class="from">From: Cecilia Gauna</span>
+          <span class="message-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </span>
       </div>
     </div>
   </div>
+  <div class="tab-content" ng-show="isSelected('contacts')"></div>
 </div>
-<script type="text/javascript">
-$('document').ready(function(){
-    $('.canvasjs-chart-credit').hide();
-});
-</script>
