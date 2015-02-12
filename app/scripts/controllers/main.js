@@ -8,23 +8,15 @@
  * Controller of the storeManagerApp
  */
 angular.module('storeManagerApp')
-  .controller('MainCtrl', function ($scope, StatisticsSrv) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope) {
+    var selectedTab = 'chat';
 
-    $scope.tab = 'stats';
-
-    StatisticsSrv.getStatistics()
-    	.then(
-    		function (stats) {
-    			$scope.stats = stats;
-    		}
-		);
-
-    $scope.changeTab = function (tab) {
-    	$scope.tab = tab;
+    $scope.selectTab = function(tab) {
+      selectedTab = tab;
     };
+
+    $scope.isSelected = function(tab) {
+      return selectedTab === tab;
+    };
+    
   });
