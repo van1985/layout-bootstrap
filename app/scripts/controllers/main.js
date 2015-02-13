@@ -10,6 +10,22 @@
 angular.module('storeManagerApp')
   .controller('MainCtrl', function ($scope) {
     var selectedTab = 'chat';
+    var displayStates = false;
+    $scope.states = [
+      {
+        key: 'online',
+        desc: 'Online'
+      },
+      {
+        key: 'away',
+        desc: 'Away'        
+      },
+      {
+        key: 'offline',
+        desc: 'Offline'
+      }
+    ];
+    $scope.status = $scope.states[0];
 
     $scope.selectTab = function(tab) {
       selectedTab = tab;
@@ -17,6 +33,22 @@ angular.module('storeManagerApp')
 
     $scope.isSelected = function(tab) {
       return selectedTab === tab;
+    };
+
+    $scope.getStatus = function() {
+      return $scope.status;
+    };
+
+    $scope.toggleStates = function() {
+      displayStates = !displayStates;
+    };
+
+    $scope.displayStates = function() {
+      return displayStates;
+    };
+
+    $scope.selectState = function(key) {
+      $scope.status = $scope.states[key];
     };
     
   });
