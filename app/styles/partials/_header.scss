@@ -13,7 +13,15 @@ header {
 				float: left;
 				height: 50px;
 				width: 50px;
-				background-image: url('../images/headset.png');
+				background-image: url('../images/headset-green.png');
+
+				&.away {
+					background-image: url('../images/headset-orange.png');
+				}
+
+				&.offline {
+					background-image: url('../images/headset-red.png');
+				}
 			}
 
 			.info {
@@ -35,6 +43,21 @@ header {
 					float: left;
 					color: #39c765;
 					font-size: medium;
+					background: none;
+					border: none;
+
+					&.away {
+						color: orange;
+					}
+
+					&.offline {
+						color: red;
+					}
+
+					option {
+						color: black;
+						background-color: #48a9ed;
+					}
 				}
 			}
 		}
