@@ -20,7 +20,7 @@
 </header>
 <div class="content">
   <div class="tab-content" ng-show="isSelected('chat')">
-    <div class="notifications">
+    <div class="tab-content-header">
       <title>Notifications</title>
       <div class="erase"></div>
       <div class="quantity"></div>
@@ -31,22 +31,75 @@
         <div class="message-content">
           <span class="from">From: Cecilia Gauna</span>
           <span class="message-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </span>
+        </div>
       </div>
-    </div>
-    <div class="message">
+      <div class="message">
         <div class="contact-image"></div>
         <div class="message-content">
           <span class="from">From: Cecilia Gauna</span>
           <span class="message-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </span>
+        </div>
       </div>
-    </div>
-    <div class="message">
+      <div class="message">
         <div class="contact-image"></div>
         <div class="message-content">
           <span class="from">From: Cecilia Gauna</span>
           <span class="message-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </span>
+        </div>
       </div>
     </div>
   </div>
-  <div class="tab-content" ng-show="isSelected('contacts')"></div>
+  <div class="tab-content" ng-show="isSelected('contacts')">
+    <div class="tab-content-header">
+      <title>Contacts</title>
+    </div>
+    <div class="tab-content-menu">
+      <span class="tab-content-menu-option" ng-class="{ selected : isContactTabSelected('pad')}"ng-click="selectContactTab('pad')">Numeric Pad</span>
+      <span class="tab-content-menu-option" ng-class="{ selected : isContactTabSelected('logs')}"ng-click="selectContactTab('logs')">Call Logs</span>
+      <span class="tab-content-menu-option" ng-class="{ selected : isContactTabSelected('list')}" ng-click="selectContactTab('list')">Contact List</span>
+    </div>
+    <div class="contacts" ng-show="isContactTabSelected('list')">
+      <div class="search"><input type="text" class="search-input" placeholder="Search Contact, Department ..." /></div>
+      <div class="list">
+        <div class="group">
+          <div class="letter">
+            <span>A</span>
+          </div>
+          <div class="contacts-by-group">
+            <div class="contact">
+              <div class="image"></div>
+              <span class="name">Javier Aleman</span>
+              <div class="call"></div>
+              <div class="chat"></div>
+            </div>
+            <div class="contact">
+              <div class="image"></div>
+              <span class="name">Javier Aleman</span>
+              <div class="call"></div>
+              <div class="chat"></div>
+            </div>
+            <div class="contact">
+              <div class="image"></div>
+              <span class="name">Javier Aleman</span>
+              <div class="call"></div>
+              <div class="chat"></div>
+            </div>
+          </div>
+        </div>
+        <div class="group">
+          <div class="letter">
+            <span>B</span>
+          </div>
+          <div class="contacts-by-group">
+            <div class="contact">
+              <div class="image"></div>
+              <span class="name">Javier Aleman</span>
+              <div class="call"></div>
+              <div class="chat"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
