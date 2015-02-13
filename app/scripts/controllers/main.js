@@ -10,6 +10,7 @@
 angular.module('storeManagerApp')
   .controller('MainCtrl', function ($scope) {
     var selectedTab = 'chat';
+    var selectedContactTab = 'list';
     var displayStates = false;
     $scope.states = [
       {
@@ -49,6 +50,14 @@ angular.module('storeManagerApp')
 
     $scope.selectState = function(key) {
       $scope.status = $scope.states[key];
+    };
+
+    $scope.isContactTabSelected = function(tab) {
+      return selectedContactTab === tab;
+    };
+
+    $scope.selectContactTab = function(tab) {
+      selectedContactTab = tab;
     };
     
   });

@@ -14,7 +14,7 @@ body {
   .tab-content {
     height: 100%;
 
-    .notifications {
+    .tab-content-header {
       background-color: #48a9ed;
       height: 23px;
       padding-left: 10px;
@@ -42,6 +42,26 @@ body {
         width: 20px;
         float: right;
         margin-right: 5px;
+      }
+    }
+
+    .tab-content-menu {
+      background-color: #48a9ed;
+      height: 32px;
+      border-left: 1px solid #65baf3;
+      border-top: 1px solid #65baf3;
+      border-bottom: 1px solid #4790bd;
+      border-right: 1px solid #4790bd;
+      padding: 5px;
+
+      .tab-content-menu-option {
+        width: 30%;
+        color: black;
+        margin-left: 20px;
+
+        &.selected {
+          color: white
+        }
       }
     }
 
@@ -80,6 +100,79 @@ body {
             font-size: smaller;
           }
         }
+      }
+    }
+
+    .contacts {
+      height: 93%;
+      background-color: #e7f2f8;
+      padding: 10px;
+
+      .search {
+        height: 50px;
+        padding: 5px;
+        margin-bot: 10px;
+        border-bottom: 1px solid #c6ced1;;
+
+        .search-input {
+          width: 100%;
+          padding-left: 5px;
+          height: 29px;
+        } 
+      }
+
+      .list {
+
+        .group {
+          border-bottom: 1px solid #c6ced1;
+
+          .letter {
+            height: 100%;
+            width: 17%;
+            float: left;
+            font-size: x-large;
+            font-weight: bold;
+            text-align: center;
+          }
+
+          .contact {
+            line-height: 50px;
+            min-height: 50px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+
+
+            .image {
+              height: 50px;
+              width: 50px;
+              float: left;
+              background-image: url('../images/person.png');
+            }
+
+            .name {
+              float: left;
+              margin-left: 10px;
+            }
+
+            .chat {
+              height: 32px;
+              width: 32px;
+              float: right;
+              margin-top: 10px;
+              background-image: url('../images/chat.png');
+            }
+
+            .call {
+              height: 32px;
+              width: 32px;
+              float: right;
+              margin-left: 10px;
+              margin-top: 10px;
+              background-image: url('../images/call.png');
+            }
+          }
+        }
+
       }
     }
   }
